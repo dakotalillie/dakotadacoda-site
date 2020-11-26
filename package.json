@@ -1,0 +1,18 @@
+{
+  "name": "dakotadacoda-site",
+  "version": "0.1.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && cp src/index.html dist/index.html && postcss src/index.css -o dist/index.css --env production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dakota Lillie",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "tailwindcss": "^2.0.1"
+  }
+}
