@@ -4,7 +4,7 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && cp src/index.html dist/index.html && postcss src/index.css -o dist/index.css --env production",
+    "build": "rm -rf dist && postcss src/index.css -o dist/index.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dakota Lillie",
