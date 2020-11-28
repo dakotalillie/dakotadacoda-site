@@ -7,3 +7,7 @@
   background-size: cover;
   height: 36rem;
 }
+
+#message {
+  resize: none;
+}
