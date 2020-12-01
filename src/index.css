@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 #home {
-  background: transparent url("../public/img/background.png") no-repeat 50% fixed;
+  background: transparent url("../public/img/background.png") no-repeat 50%
+    fixed;
   background-size: cover;
   height: 36rem;
 }
 
 #message {
+  min-height: 12rem;
   resize: none;
+}
+
+.skills-grid {
+  @apply grid 2xl:grid-cols-12 xl:grid-cols-8 lg:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-y-8 text-gray-400;
 }
