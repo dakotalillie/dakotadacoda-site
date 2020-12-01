@@ -23,13 +23,14 @@ jobs:
         run: |
           mv public/* .
           rm -rf public
+      - name: Configure git
+        run: |
+          git config --local user.email "dakota.lillie@icloud.com"
+          git config --local user.name "Dakota Lillie"
       - name: Commit changes
         run: |
           git switch -c production
           git add .
           git commit -m "Production deployment"
       - name: Push to production
-        run: |
-          git config --local user.email "dakota.lillie@icloud.com"
-          git config --local user.name "Dakota Lillie"
-          git push --force origin production
+        run: git push --force origin production
