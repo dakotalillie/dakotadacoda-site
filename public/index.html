@@ -6,11 +6,12 @@
     <meta name="author" content="Dakota Lillie">
     <meta name="description" content="Personal website for software engineer Dakota Lillie.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="../dist/index.css">
+    <script src="../dist/index.js" async></script>
   </head>
   <body class="text-white">
     <header class="bg-black bg-opacity-50 w-full fixed py-2">
@@ -112,24 +113,29 @@
       <section id="contact" class="bg-gray-900">
         <div class="container mx-auto py-16 px-8 space-y-8">
           <h2 class="text-3xl">Get in Touch</h2>
-          <form class="grid grid-cols-2 gap-x-16">
-            <div class="space-y-8">
-              <div class="space-y-2">
-                <label class="block" for="name">Name</label>
-                <input class="w-full text-black" id="name">
+          <form id="contact-form" class="space-y-6" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-2 gap-x-16">
+              <div class="space-y-8">
+                <div class="space-y-2">
+                  <label class="block" for="name">Name</label>
+                  <input class="w-full text-black py-1 px-2 rounded" id="name" required>
+                </div>
+                <div class="space-y-2">
+                  <label class="block" for="email">Email</label>
+                  <input class="w-full text-black py-1 px-2 rounded" id="email" type="email" required>
+                </div>
+                <div class="space-y-2">
+                  <label class="block" for="subject">Subject</label>
+                  <input class="w-full text-black py-1 px-2 rounded" id="subject" required>
+                </div>
               </div>
-              <div class="space-y-2">
-                <label class="block" for="email">Email</label>
-                <input class="w-full text-black" id="email">
-              </div>
-              <div class="space-y-2">
-                <label class="block" for="subject">Subject</label>
-                <input class="w-full text-black" id="subject">
+              <div class="flex flex-col space-y-2">
+                <label class="block" for="message">Message</label>
+                <textarea class="w-full flex-1 text-black py-1 px-2 rounded" id="message" required></textarea>
               </div>
             </div>
-            <div class="flex flex-col space-y-2">
-              <label class="block" for="message">Message</label>
-              <textarea class="w-full flex-1 text-black" id="message"></textarea>
+            <div class="flex flex-row justify-end">
+              <button class="py-2 px-4 bg-blue-500 hover:bg-blue-400 rounded" type="submit">Submit</button>
             </div>
           </form>
         </div>
