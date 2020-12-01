@@ -11,13 +11,25 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - run: npm ci
-      - run: npm run build
-      - run: find . -type f -maxdepth 1 -exec rm -f {} +
-      - run: find . ! \( -name '.' -o -name '..' -o -name '.git' -o -name 'public' \) -type d -maxdepth 1 -exec rm -rf {} +
-      - run: mv public/* .
-      - run: rm -rf public
-      - run: git switch -c production
-      - run: git add .
-      - run: git commit -m "Production deployment"
-      - run: git push --force origin production
+      - name: Install dependencies
+        run: npm ci
+      - name: Build assets
+        run: npm run build
+      - name: Delete everything but the 'public' directory
+        run: |
+          find . -type f -maxdepth 1 -exec rm -f {} +
+          find . ! \( -name '.' -o -name '..' -o -name '.git' -o -name 'public' \) -type d -maxdepth 1 -exec rm -rf {} +
+      - name: Move the 'public' directory contents up to the root
+        run: |
+          mv public/* .
+          rm -rf public
+      - name: Commit changes
+        run: |
+          git switch -c production
+          git add .
+          git commit -m "Production deployment"
+      - name: Push to production
+        run: |
+          git config --local user.email "dakota.lillie@icloud.com"
+          git config --local user.name "Dakota Lillie"
+          git push --force origin production
