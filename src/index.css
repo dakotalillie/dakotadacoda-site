@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 #home {
-  background: transparent url("../public/img/background.png") no-repeat 50%
-    fixed;
+  background: transparent url("../img/background.png") no-repeat 50% fixed;
   background-size: cover;
   height: 36rem;
 }
