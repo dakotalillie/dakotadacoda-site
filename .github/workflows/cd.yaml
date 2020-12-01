@@ -1,0 +1,21 @@
+name: cd
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm run build
+      - run: find . -type f -maxdepth 1 -exec rm -f {} +
+      - run: find . ! \( -name '.' -o -name '..' -o -name '.git' -o -name 'public' \) -type d -maxdepth 1 -exec rm -rf {} +
+      - run: mv public/* .
+      - run: rm -rf public
+      - run: git switch -c production
+      - run: git add .
+      - run: git commit -m "Production deployment"
+      - run: git push --force origin production
