@@ -1,0 +1,395 @@
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const values = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value,
+    };
+
+    fetch(
+      "https://mpf6bdi5vd.execute-api.us-east-1.amazonaws.com/Prod/send-mail",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("succeeded");
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log("failed");
+        console.log(err);
+      });
+  }
+</script>
+
+<style global lang="postcss">
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  #home {
+    background: transparent url("../img/background.png") no-repeat 50% fixed;
+    background-size: cover;
+    height: 36rem;
+  }
+
+  #message {
+    min-height: 12rem;
+    resize: none;
+  }
+
+  .skills-grid {
+    @apply grid 2xl:grid-cols-12 xl:grid-cols-8 lg:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-y-8 text-gray-400;
+  }
+</style>
+
+<header class="bg-black bg-opacity-50 w-full fixed py-2">
+  <div class="container mx-auto flex flex-row justify-between px-8">
+    <svg
+      width="28"
+      height="28"
+      class="fill-current"
+      viewBox="0 0 24 26"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="m0.51318 13.216l0.035156-0.699 4.01-0.0381c0.28882-4.1941 3.114-7.2761 6.983-8.008l8e-3 -3.9619c0.3211 0 0.21 0.005859 0.554 0.005859l-0.0171 12.571zm11.023-7.8902c-2.708 0.854-3.0921 5.4131-3.1411 7.0711l3.039 0.0181z" />
+      <path
+        d="m23.487 13.216c-0.0151-1.532-0.0352 0.708-0.0352-0.699l-4.0109-0.0381c-0.2889-4.1941-3.1128-7.2761-6.982-8.008l-9e-3 -3.9619-0.553 0.005859 0.0171 12.571c3.98 0 7.4939 0.1302 11.573 0.1302zm-11.023-7.8902c2.708 0.854 3.0908 5.4131 3.1408 7.0711l-3.039 0.0181z" />
+      <path
+        d="m0.51294 12.788c0.015137 1.532 0.035157-0.708 0.035157 0.699l4.01 0.0381c0.28881 4.1941 3.114 7.2761 6.9829 8.008l0.0081 3.9619 0.5539-0.0058-0.0171-12.571zm11.023 7.8901c-2.708-0.854-3.092-5.4131-3.1411-7.071l3.0391-0.0181z" />
+      <path
+        d="m23.487 12.788l-0.0352 0.699-4.011 0.0381c-0.2888 4.1941-3.1128 7.2761-6.9819 8.008l-9e-3 3.9619-0.553-0.0058 0.0171-12.571c3.9799 0 7.4939-0.1301 11.573-0.1301zm-11.023 7.8901c2.708-0.854 3.0908-5.4131 3.1409-7.071l-3.0391-0.0181z" />
+    </svg>
+    <nav class="flex flex-row space-x-4  items-center">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section
+    id="home"
+    class="flex flex-col justify-center items-center space-y-4">
+    <h1 class="text-7xl">Dakota Lillie</h1>
+    <h3 class="text-xl">Software Engineer</h3>
+  </section>
+  <section id="about" class="bg-gray-900">
+    <div
+      class="container mx-auto py-16 px-8 flex flex-row justify-between items-center">
+      <div class="space-y-3">
+        <p class="text-3xl">My name is Dakota</p>
+        <p class="text-3xl flex items-center">
+          I work at
+          <svg
+            class="fill-current h-7 ml-2 mt-1.5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="115 -9.6 257.8 47.6"
+            enable-background="new 115 -9.6 257.8 47.6"
+            xml:space="preserve">
+            <path
+              d="M115-9.6h18.9c3.6,0,6.3,0.9,8.3,2.4c2.2,1.8,3.4,4.4,3.4,7.6c0,3.7-1.5,6-4.5,7.4V8c4,1.3,6.3,4.9,6.3,9.2 c0,4.1-1.6,7.3-4.2,9.3c-2.2,1.6-5,2.3-8.8,2.3H115V-9.6z M132,5.4c2,0,3.5-1.1,3.5-3.4c0-2.2-1.5-3.3-3.6-3.3h-6.5v6.6H132z M132.9,20.3c2.3,0,4-1.4,4-3.9c0-2.7-1.8-3.9-4-3.9h-7.4v7.9H132.9z" />
+            <path d="M149.1-9.6h9.9v38.5h-9.9V-9.6z" />
+            <path
+              d="M161,15.2c0-8.7,5.6-14.5,14.3-14.5s14.2,5.9,14.2,14.5c0,8.7-5.5,14.5-14.2,14.5 C166.6,29.7,161,23.9,161,15.2z M179.6,15.2c0-4.8-1.5-7.8-4.5-7.8s-4.4,3-4.4,7.8c0,4.8,1.4,7.9,4.4,7.9 C178.1,23,179.6,20,179.6,15.2z" />
+            <path
+              d="M190.6,15.2c0-8.7,5.6-14.5,14.3-14.5S219,6.5,219,15.2c0,8.7-5.5,14.5-14.2,14.5 C196.2,29.7,190.6,23.9,190.6,15.2z M209.2,15.2c0-4.8-1.5-7.8-4.5-7.8c-3,0-4.4,3-4.4,7.8c0,4.8,1.4,7.9,4.4,7.9 C207.7,23,209.2,20,209.2,15.2z" />
+            <path
+              d="M221,1.4h9.2v4.1h0.2c1.8-3.2,4.3-4.9,8.3-4.9c3.5,0,6.1,1.7,7.4,4.7h0.2c2.2-3.6,5.1-4.7,8.5-4.7 c6.4,0,9.1,4.7,9.1,11v17.2h-9.6V13.3c0-2.8-0.9-4.6-3.3-4.6c-2.4,0-3.6,2.2-3.6,5.2v14.9h-9.6V13.3c0-2.8-0.9-4.6-3.3-4.6 c-2.4,0-3.6,2.2-3.6,5.2v14.9H221C221,28.8,221,1.4,221,1.4z" />
+            <path
+              d="M276,25.2h-0.1v3.6h-9.2V-9.6h9.6V4.2h0.2c1.8-2.4,4.3-3.7,7.8-3.7c6.9,0,10.9,6.2,10.9,14.5 c0,9.3-4.3,14.7-11.5,14.7C280.7,29.7,277.6,28.3,276,25.2z M285.3,14.9c0-4.4-1.6-7.3-4.5-7.3c-3,0-4.8,2.9-4.8,7.3 c0,4.4,1.9,7.3,4.8,7.3S285.3,19.4,285.3,14.9z" />
+            <path
+              d="M296.3,15.1c0-8.6,5.7-14.5,13.9-14.5c4.1,0,7.2,1.3,9.6,3.6c3.2,3.1,4.6,7.9,4.5,13.5h-18.4 c0.4,3.4,2,5.2,4.9,5.2c1.7,0,3.2-0.8,3.8-2.6h9.3c-1.6,6.3-6.5,9.4-13.4,9.4C302,29.6,296.3,23.8,296.3,15.1z M305.9,12.2h8.8 c-0.2-3.3-2-5-4.3-5C307.7,7.1,306.2,9,305.9,12.2z" />
+            <path
+              d="M335.2,6.1h0.2c2-3.8,4.6-5.3,7.9-5.3c0.8,0,1.3,0.1,1.6,0.3v8.4h-0.2c-5.7-1-9,1.7-9,7.9v11.5H326V1.4h9.2 V6.1z" />
+            <path
+              d="M345.9,28.9h9.3c0.4,1.2,1.6,2.3,3.9,2.3c3.1,0,4.2-1.9,4.2-4.8v-2h-0.2c-1.5,1.8-3.6,3.1-6.6,3.1 c-5.9,0-11.1-4.4-11.1-13c0-7.9,4.2-14,10.6-14c3.7,0,5.9,1.5,7.4,3.8h0.2v-3h9.2v23.8c0,4.4-1.5,7.8-3.8,9.8c-2.4,2.1-5.8,3-9.7,3 C351.9,38,346.8,35,345.9,28.9z M363.7,14.1c0-3.4-1.6-6.2-4.4-6.2c-2.7,0-4.4,2.4-4.4,6.2c0,3.7,1.7,6.3,4.4,6.3 C362,20.4,363.7,17.7,363.7,14.1z" />
+          </svg>
+        </p>
+        <div class="space-y-1">
+          <p class="text-3xl">I write code and make music</p>
+          <p class="text-xl">(The two are not so dissimilar)</p>
+        </div>
+      </div>
+      <picture>
+        <img
+          src="img/profile.jpg"
+          alt="Dakota profile"
+          class="h-56 rounded-3xl" />
+      </picture>
+    </div>
+  </section>
+  <section id="skills" class="bg-gray-700">
+    <div class="container mx-auto py-16 px-8 space-y-8">
+      <h2 class="text-3xl">Technologies I've Used</h2>
+      <h3 class="text-2xl">Languages</h3>
+      <div class="skills-grid">
+        <figure class="space-y-2">
+          <img src="img/javascript.png" alt="JavaScript" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            JavaScript
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/typescript.png" alt="TypeScript" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            TypeScript
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/python.png" alt="Python" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Python
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/php.png" alt="PHP" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            PHP
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/golang.jpg" alt="Golang" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Golang
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/ruby.png" alt="Ruby" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Ruby
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/c++.png" alt="C++" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            C++
+          </figcaption>
+        </figure>
+      </div>
+      <h3 class="text-2xl">Frameworks</h3>
+      <div class="skills-grid">
+        <figure class="space-y-2">
+          <img src="img/react.png" alt="React" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            React
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/gatsby.png" alt="Gatsby" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Gatsby
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/nextjs.jpg" alt="NextJS" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            NextJS
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/express.png" alt="Express" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Express
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/flask.png" alt="Flask" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Flask
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/django.png" alt="Django" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Django
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/wordpress.png" alt="WordPress" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            WordPress
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/rails.png" alt="Ruby on Rails" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Ruby on Rails
+          </figcaption>
+        </figure>
+      </div>
+      <h3 class="text-2xl">Other Tools</h3>
+      <div class="skills-grid">
+        <figure class="space-y-2">
+          <img src="img/jest.png" alt="Jest" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Jest
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img
+            src="img/testing-library.png"
+            alt="Testing Library"
+            class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Testing Library
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/pytest.png" alt="PyTest" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            PyTest
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/sass.png" alt="Sass" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Sass
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/tailwind.jpg" alt="Tailwind" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Tailwind
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img
+            src="img/styled-components.png"
+            alt="Styled Components"
+            class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Styled Components
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/emotion.png" alt="Emotion" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Emotion
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/redux.png" alt="Redux" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Redux
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/graphql.png" alt="GraphQL" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            GraphQL
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/swagger.png" alt="Swagger" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Swagger
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/docker.png" alt="Docker" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Docker
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/kubernetes.png" alt="Kubernetes" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Kubernetes
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/terraform.png" alt="Terraform" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Terraform
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img src="img/jenkins.png" alt="Jenkins" class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Jenkins
+          </figcaption>
+        </figure>
+      </div>
+      <h3 class="text-2xl">Certifications</h3>
+      <div class="skills-grid">
+        <figure class="space-y-2">
+          <img
+            src="img/aws-cloud-practitioner.png"
+            alt="AWS Certified Cloud Practitioner"
+            class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            AWS Certified Cloud Practitioner
+          </figcaption>
+        </figure>
+        <figure class="space-y-2">
+          <img
+            src="img/ckad.png"
+            alt="Certified Kubernetes Application Developer"
+            class="h-24" />
+          <figcaption class="w-24 text-center text-sm leading-4">
+            Certified Kubernetes Application Developer
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="bg-gray-900">
+    <div class="container mx-auto py-16 px-8 space-y-8">
+      <h2 class="text-3xl">Get in Touch</h2>
+      <form id="contact-form" class="space-y-6" onsubmit="handleSubmit(event)">
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+          <div class="space-y-8">
+            <div class="space-y-2">
+              <label class="block" for="name">Name</label>
+              <input
+                class="w-full text-black py-1 px-2 rounded"
+                id="name"
+                required />
+            </div>
+            <div class="space-y-2">
+              <label class="block" for="email">Email</label>
+              <input
+                class="w-full text-black py-1 px-2 rounded"
+                id="email"
+                type="email"
+                required />
+            </div>
+            <div class="space-y-2">
+              <label class="block" for="subject">Subject</label>
+              <input
+                class="w-full text-black py-1 px-2 rounded"
+                id="subject"
+                required />
+            </div>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label class="block" for="message">Message</label>
+            <textarea
+              class="w-full flex-1 text-black py-1 px-2 rounded"
+              id="message"
+              required />
+          </div>
+        </div>
+        <div class="flex flex-row justify-end">
+          <button
+            class="py-2 px-4 bg-blue-500 hover:bg-blue-400 rounded"
+            type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="bg-black">
+  <div class="container mx-auto py-4 px-8 flex justify-center items-center">
+    This site was made using basic HTML, Tailwind CSS, and Github Pages
+  </div>
+</footer>

@@ -2,17 +2,30 @@
   "name": "dakotadacoda-site",
   "version": "0.1.0",
   "description": "Personal website",
-  "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && postcss src/index.css -o public/assets/index.css && cp src/index.js public/assets/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
   },
   "author": "Dakota Lillie",
   "license": "ISC",
   "dependencies": {
+    "sirv-cli": "^1.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "autoprefixer": "^10.0.2",
     "postcss": "^8.1.10",
     "postcss-cli": "^8.3.0",
+    "postcss-nesting": "^7.0.1",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.0.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^4.6.1",
     "tailwindcss": "^2.0.1"
   }
 }
