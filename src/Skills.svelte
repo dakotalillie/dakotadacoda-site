@@ -58,7 +58,7 @@
 </script>
 
 <section id="skills" class="bg-gray-700">
-  <div class="container mx-auto py-16 px-8 space-y-8">
+  <div class="container mx-auto py-12 px-8 space-y-8 md:py-16">
     <h2 class="text-3xl">Technologies I've Used</h2>
     {#each skillCategories as { category, skills }}
       <h3 class="text-2xl">{category}</h3>

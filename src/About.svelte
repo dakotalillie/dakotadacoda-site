@@ -3,18 +3,20 @@
 </script>
 
 <section id="about" class="bg-gray-900">
-  <div class="container mx-auto py-16 px-8 flex flex-row justify-between items-center">
-    <div class="space-y-3">
-      <p class="text-3xl">My name is Dakota</p>
-      <p class="text-3xl flex items-center">
+  <div class="container mx-auto py-12 px-8 flex flex-col items-center md:py-16 md:flex-row md:justify-between">
+    <div class="space-y-3 text-2xl text-center md:text-left md:text-3xl">
+      <p>My name is Dakota</p>
+      <p class="flex flex-row items-center justify-center md:justify-start">
         I work at
         <BloombergLogo />
       </p>
       <div class="space-y-1">
-        <p class="text-3xl">I write code and make music</p>
-        <p class="text-xl">(The two are not so dissimilar)</p>
+        <p>I write code and make music</p>
+        <p class="text-base md:text-xl">(The two are not so dissimilar)</p>
       </div>
     </div>
-    <picture> <img src="img/profile.jpg" alt="Dakota profile" class="h-56 rounded-3xl" /> </picture>
+    <picture class="mt-8 md:mt-0">
+      <img src="img/profile.jpg" alt="Dakota profile" class="h-56 rounded-3xl" />
+    </picture>
   </div>
 </section>
