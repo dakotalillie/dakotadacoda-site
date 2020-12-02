@@ -59,10 +59,11 @@
 
 <section id="skills" class="bg-gray-700">
   <div class="container mx-auto py-12 px-8 space-y-8 md:py-16">
-    <h2 class="text-3xl">Technologies I've Used</h2>
+    <h2 class="text-3xl text-center md:text-left">Technologies I've Used</h2>
     {#each skillCategories as { category, skills }}
       <h3 class="text-2xl">{category}</h3>
-      <div class="grid 2xl:grid-cols-12 xl:grid-cols-8 lg:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-y-8 text-gray-400">
+      <div
+        class="flex flex-row overflow-x-scroll overflow-y-hidden text-gray-400 space-x-8 sm:space-x-0 sm:grid sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
         {#each skills as skill}
           <SkillTile {...skill} />
         {/each}

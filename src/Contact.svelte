@@ -32,7 +32,7 @@
 
 <section id="contact" class="bg-gray-900">
   <div class="container mx-auto py-12 px-8 space-y-8 md:py-16">
-    <h2 class="text-3xl">Get in Touch</h2>
+    <h2 class="text-3xl text-center md:text-left">Get in Touch</h2>
     <form id="contact-form" class="space-y-6" on:submit={handleSubmit}>
       <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
         <div class="space-y-8">
