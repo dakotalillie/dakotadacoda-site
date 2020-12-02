@@ -20,6 +20,7 @@
         { image: "react.png", name: "React" },
         { image: "gatsby.png", name: "Gatsby" },
         { image: "nextjs.jpg", name: "NextJS" },
+        { image: "svelte.png", name: "Svelte" },
         { image: "express.png", name: "Express" },
         { image: "flask.png", name: "Flask" },
         { image: "django.png", name: "Django" },
