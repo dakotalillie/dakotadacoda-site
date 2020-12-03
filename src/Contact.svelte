@@ -24,6 +24,10 @@
 </script>
 
 <style>
+  section {
+    scroll-margin-top: 4rem;
+  }
+
   textarea {
     min-height: 12rem;
     resize: none;

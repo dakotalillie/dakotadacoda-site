@@ -57,6 +57,12 @@
   ];
 </script>
 
+<style>
+  section {
+    scroll-margin-top: 4rem;
+  }
+</style>
+
 <section id="experience" class="bg-gray-700">
   <div class="container mx-auto py-12 px-8 space-y-8 md:py-16">
     <h2 class="text-3xl text-center md:text-left">Experience</h2>

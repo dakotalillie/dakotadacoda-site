@@ -2,6 +2,12 @@
   import BloombergLogo from "./BloombergLogo.svelte";
 </script>
 
+<style>
+  section {
+    scroll-margin-top: 4rem;
+  }
+</style>
+
 <section id="about" class="bg-gray-800">
   <div class="container mx-auto py-12 px-8 flex flex-col items-center sm:flex-row sm:justify-between md:py-16">
     <div class="space-y-3 text-2xl text-center sm:text-left md:text-3xl">
