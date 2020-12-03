@@ -4,7 +4,7 @@
   }
 </style>
 
-<footer class="bg-black">
+<footer class="bg-gray-900">
   <div
     class="container mx-auto py-4 px-8 flex flex-col space-y-1 justify-center items-center text-center text-xs md:text-left md:items-start">
     <p>

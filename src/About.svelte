@@ -2,7 +2,7 @@
   import BloombergLogo from "./BloombergLogo.svelte";
 </script>
 
-<section id="about" class="bg-gray-900">
+<section id="about" class="bg-gray-800">
   <div class="container mx-auto py-12 px-8 flex flex-col items-center sm:flex-row sm:justify-between md:py-16">
     <div class="space-y-3 text-2xl text-center sm:text-left md:text-3xl">
       <p>My name is Dakota</p>

@@ -1,13 +1,13 @@
 <script>
   import Home from "./Home.svelte";
   import About from "./About.svelte";
-  import Skills from "./Skills.svelte";
+  import Experience from "./Experience.svelte";
   import Contact from "./Contact.svelte";
 </script>
 
 <main>
   <Home />
   <About />
-  <Skills />
+  <Experience />
   <Contact />
 </main>

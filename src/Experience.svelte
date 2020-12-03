@@ -1,10 +1,10 @@
 <script>
-  import SkillTile from "./SkillTile.svelte";
+  import ExperienceTile from "./ExperienceTile.svelte";
 
-  const skillCategories = [
+  const experience = [
     {
       category: "Languages",
-      skills: [
+      items: [
         { image: "javascript.png", name: "JavaScript" },
         { image: "typescript.png", name: "TypeScript" },
         { image: "python.png", name: "Python" },
@@ -16,7 +16,7 @@
     },
     {
       category: "Frameworks",
-      skills: [
+      items: [
         { image: "react.png", name: "React" },
         { image: "gatsby.png", name: "Gatsby" },
         { image: "nextjs.jpg", name: "NextJS" },
@@ -30,7 +30,7 @@
     },
     {
       category: "Other Tools",
-      skills: [
+      items: [
         { image: "jest.png", name: "Jest" },
         { image: "testing-library.png", name: "Testing Library" },
         { image: "pytest.png", name: "PyTest" },
@@ -49,7 +49,7 @@
     },
     {
       category: "Certifications",
-      skills: [
+      items: [
         { image: "aws-cloud-practitioner.png", name: "AWS Certified Cloud Practitioner" },
         { image: "ckad.png", name: "Certified Kubernetes Application Developer" },
       ],
@@ -57,15 +57,15 @@
   ];
 </script>
 
-<section id="skills" class="bg-gray-700">
+<section id="experience" class="bg-gray-700">
   <div class="container mx-auto py-12 px-8 space-y-8 md:py-16">
-    <h2 class="text-3xl text-center md:text-left">Technologies I've Used</h2>
-    {#each skillCategories as { category, skills }}
+    <h2 class="text-3xl text-center md:text-left">Experience</h2>
+    {#each experience as { category, items }}
       <h3 class="text-2xl">{category}</h3>
       <div
-        class="flex flex-row overflow-x-scroll overflow-y-hidden text-gray-400 space-x-8 sm:space-x-0 sm:grid sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
-        {#each skills as skill}
-          <SkillTile {...skill} />
+        class="text-gray-400 xsm:flex xsm:flex-row xsm:overflow-x-scroll xsm:overflow-y-hidden xsm:space-x-8 sm:space-x-0 sm:grid sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
+        {#each items as item}
+          <ExperienceTile {...item} />
         {/each}
       </div>
     {/each}
