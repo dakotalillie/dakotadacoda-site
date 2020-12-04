@@ -29,7 +29,7 @@
 <header class="fixed w-full">
   <div class="bg-gray-900 py-4 h-16 shadow-2xl">
     <div class="container mx-auto flex flex-row justify-between px-8">
-      <Logo />
+      <a href="#home"><Logo /></a>
       <nav class="hidden flex-row space-x-4 items-center sm:flex">
         {#each links as { href, label }}<a {href}>{label}</a>{/each}
       </nav>
