@@ -26,6 +26,7 @@
         written in
         <a href="https://golang.org/">Go</a>.
       </p>
+      <p>The source code for that is available <a href="https://github.com/dakotalillie/dakotadacoda-svc">here</a>.</p>
     </div>
     <div class="flex flex-row items-center space-x-6">
       <Github />
