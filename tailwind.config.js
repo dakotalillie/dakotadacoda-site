@@ -7,6 +7,9 @@ module.exports = {
     enabled: production,
   },
   theme: {
+    fontFamily: {
+      sans: ["Source Sans Pro", "sans-serif"],
+    },
     screens: {
       xsm: { max: "639px" },
       sm: "640px",
