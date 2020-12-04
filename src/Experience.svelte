@@ -69,7 +69,7 @@
     {#each experience as { category, items }}
       <h3 class="text-2xl">{category}</h3>
       <div
-        class="text-gray-400 xsm:flex xsm:flex-row xsm:overflow-x-scroll xsm:overflow-y-hidden xsm:space-x-8 sm:space-x-0 sm:grid sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
+        class="text-gray-300 xsm:flex xsm:flex-row xsm:overflow-x-scroll xsm:overflow-y-hidden xsm:space-x-8 sm:space-x-0 sm:grid sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
         {#each items as item}
           <ExperienceTile {...item} />
         {/each}

@@ -1,5 +1,5 @@
 <svg
-  class="fill-current h-7 ml-2 mt-1 md:h-8 md:mt-1.5"
+  class="fill-current h-7 ml-2 md:h-8 md:mt-1"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="115 -9.6 257.8 47.6"
   enable-background="new 115 -9.6 257.8 47.6"
