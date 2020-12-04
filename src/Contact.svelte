@@ -1,24 +1,26 @@
 <script>
+  import Spinner from "./Spinner.svelte";
+
   let name = "";
   let email = "";
   let subject = "";
   let message = "";
+  let requestStatus = "";
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://mpf6bdi5vd.execute-api.us-east-1.amazonaws.com/Prod/send-mail", {
+    requestStatus = "requested";
+
+    fetch("https://mpf6bdi5vd.execute-api.us-east-1.amazonaws.com/Prod/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, subject, message }),
     })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log("succeeded");
-        console.log(res);
+      .then(() => {
+        requestStatus = "succeeded";
       })
       .catch((err) => {
-        console.log("failed");
-        console.log(err);
+        requestStatus = "failed";
       });
   }
 </script>
@@ -31,6 +33,10 @@
   textarea {
     min-height: 12rem;
     resize: none;
+  }
+
+  button {
+    width: 84px;
   }
 </style>
 
@@ -58,8 +64,20 @@
           <textarea class="w-full flex-1 text-black py-1 px-2 rounded" id="message" required bind:value={message} />
         </div>
       </div>
-      <div class="flex flex-row justify-end">
-        <button class="py-2 px-4 bg-blue-500 hover:bg-blue-400 rounded" type="submit">Submit</button>
+      <div class="flex flex-row justify-end space-x-4">
+        {#if requestStatus === 'succeeded'}
+          <p class="flex items-center text-green-400">Your message has been sent!</p>
+        {:else if requestStatus === 'failed'}
+          <p class="flex items-center text-red-400">Oops! Something went wrong.</p>
+        {/if}
+        <button
+          class="py-2 px-4 bg-blue-500 hover:bg-blue-400 rounded"
+          disabled={requestStatus === 'requested'}
+          type="submit">
+          {#if requestStatus === 'requested'}
+            <Spinner />
+          {:else}Submit{/if}
+        </button>
       </div>
     </form>
   </div>

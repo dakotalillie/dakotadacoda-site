@@ -19,7 +19,6 @@
 
   onMount(() => {
     document.addEventListener("click", (ev) => {
-      console.log(ev.target);
       if (showMobileNav && !mobileNav.contains(ev.target)) {
         showMobileNav = false;
       }
