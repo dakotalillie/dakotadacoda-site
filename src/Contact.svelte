@@ -26,8 +26,9 @@
 </script>
 
 <style>
-  section {
-    scroll-margin-top: 4rem;
+  #contact {
+    padding-top: 4rem;
+    margin-top: -4rem;
   }
 
   textarea {
@@ -40,7 +41,8 @@
   }
 </style>
 
-<section id="contact" class="bg-gray-800">
+<div id="contact" />
+<section class="bg-gray-800">
   <div class="container mx-auto py-12 px-8 space-y-8 md:py-16">
     <h2 class="text-3xl text-center md:text-left">Get in Touch</h2>
     <form id="contact-form" class="space-y-6" on:submit={handleSubmit}>
