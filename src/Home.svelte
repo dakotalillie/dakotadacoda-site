@@ -5,7 +5,7 @@
 
 <style>
   section {
-    background: transparent url("../img/background-mobile.png") no-repeat 50% fixed;
+    background: transparent url("../img/background-mobile.png") no-repeat 50% center;
     background-size: cover;
     height: 36rem;
   }
