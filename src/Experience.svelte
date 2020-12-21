@@ -74,7 +74,7 @@
     new Splide("#languages-carousel", commonOptions).mount();
     new Splide("#frameworks-carousel", commonOptions).mount();
     new Splide("#other-tools-carousel", commonOptions).mount();
-    new Splide("#certifications-carousel", { ...commonOptions, pagination: false }).mount();
+    new Splide("#certifications-carousel", { ...commonOptions, pagination: false, drag: false }).mount();
   });
 </script>
 
@@ -105,7 +105,7 @@
       <div
         class="text-gray-300 hidden sm:grid sm:space-x-0 sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
         {#each items as item}
-          <ExperienceTile className="space-y-2" {...item} />
+          <ExperienceTile {...item} />
         {/each}
       </div>
       <div id={`${category.split(' ').join('-').toLowerCase()}-carousel`} class="splide sm:hidden">

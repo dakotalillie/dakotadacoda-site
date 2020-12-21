@@ -1,4 +1,6 @@
 <script>
+  import clsx from "clsx";
+
   export let image;
   export let name;
   export let className = "";
@@ -27,12 +29,12 @@
   }
 </style>
 
-<figure class={className}>
+<figure class={clsx(className, 'space-y-2')}>
   <img
     data-splide-lazy={isCarouselSlide ? `img/${image}` : undefined}
     data-src={isCarouselSlide ? undefined : `img/${image}`}
     alt={name}
     loading={isCarouselSlide ? undefined : 'lazy'}
     class={isCarouselSlide ? undefined : 'lazyload'} />
-  <figcaption class="mt-2 text-center text-sm leading-4">{name}</figcaption>
+  <figcaption class="text-center text-sm leading-4">{name}</figcaption>
 </figure>
