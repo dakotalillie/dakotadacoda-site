@@ -22,9 +22,9 @@
       </div>
     </div>
     <picture class="mt-8 sm:mt-0">
-      <source srcset="img/profile.webp" type="image/webp" />
-      <source srcset="img/profile.jpg" type="image/jpeg" />
-      <img src="img/profile.jpg" alt="Dakota profile" class="h-56 rounded-3xl" />
+      <source data-srcset="img/profile.webp" type="image/webp" />
+      <source data-srcset="img/profile.jpg" type="image/jpeg" />
+      <img data-src="img/profile.jpg" alt="Dakota profile" class="lazyload h-56 rounded-3xl" />
     </picture>
   </div>
 </section>

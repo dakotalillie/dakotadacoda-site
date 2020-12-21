@@ -10,6 +10,7 @@
   "author": "Dakota Lillie",
   "license": "ISC",
   "dependencies": {
+    "lazysizes": "^5.3.0-beta1",
     "sirv-cli": "^1.0.0"
   },
   "devDependencies": {
