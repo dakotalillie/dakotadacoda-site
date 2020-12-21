@@ -88,6 +88,12 @@
     @apply bottom-0 left-0 relative mt-2 transform-none;
     width: 93%;
   }
+
+  .splide :global(.splide__pagination__page) {
+    height: 10px;
+    margin: 6px;
+    width: 10px;
+  }
 </style>
 
 <div id="experience" />
