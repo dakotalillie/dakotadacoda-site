@@ -26,7 +26,7 @@
   });
 </script>
 
-<header class="fixed w-full">
+<header class="fixed w-full z-10">
   <div class="bg-gray-900 py-4 h-16 shadow-2xl">
     <div class="container mx-auto flex flex-row justify-between px-8">
       <a href="#home"><Logo /></a>

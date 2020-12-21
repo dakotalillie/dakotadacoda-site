@@ -1,4 +1,6 @@
 <script>
+  import "@splidejs/splide/dist/css/splide.min.css";
+
   import Global from "./Global.svelte";
   import Header from "./Header.svelte";
   import Main from "./Main.svelte";

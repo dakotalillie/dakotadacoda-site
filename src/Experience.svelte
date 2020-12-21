@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from "svelte";
+  import Splide from "@splidejs/splide";
   import ExperienceTile from "./ExperienceTile.svelte";
 
   const experience = [
@@ -55,12 +57,35 @@
       ],
     },
   ];
+
+  onMount(() => {
+    const commonOptions = {
+      arrows: false,
+      perPage: 4,
+      keyboard: "focused",
+      breakpoints: {
+        500: {
+          perPage: 3,
+        },
+      },
+    };
+
+    new Splide("#languages-carousel", commonOptions).mount();
+    new Splide("#frameworks-carousel", commonOptions).mount();
+    new Splide("#other-tools-carousel", commonOptions).mount();
+    new Splide("#certifications-carousel", { ...commonOptions, pagination: false }).mount();
+  });
 </script>
 
 <style>
   #experience {
     padding-top: 4rem;
     margin-top: -4rem;
+  }
+
+  .splide :global(.splide__pagination) {
+    @apply bottom-0 left-0 relative mt-2 transform-none;
+    width: 93%;
   }
 </style>
 
@@ -71,10 +96,19 @@
     {#each experience as { category, items }}
       <h3 class="text-2xl">{category}</h3>
       <div
-        class="text-gray-300 xsm:flex xsm:flex-row xsm:overflow-x-scroll xsm:overflow-y-hidden xsm:space-x-8 sm:space-x-0 sm:grid sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
+        class="text-gray-300 hidden sm:grid sm:space-x-0 sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
         {#each items as item}
-          <ExperienceTile {...item} />
+          <ExperienceTile className="space-y-2" {...item} />
         {/each}
+      </div>
+      <div id={`${category.split(' ').join('-').toLowerCase()}-carousel`} class="splide sm:hidden">
+        <div class="splide__track">
+          <div class="splide__list">
+            {#each items as item}
+              <ExperienceTile className="splide__slide" {...item} />
+            {/each}
+          </div>
+        </div>
       </div>
     {/each}
   </div>
