@@ -5,9 +5,33 @@
 
 <style>
   section {
-    background: transparent url("../img/background.png") no-repeat 50% fixed;
+    background: transparent url("../img/background-mobile.png") no-repeat 50% fixed;
     background-size: cover;
     height: 36rem;
+  }
+
+  :global(.webp) section {
+    background-image: url("../img/background-mobile.webp");
+  }
+
+  @screen lg {
+    section {
+      background-image: url("../img/background-desktop.png");
+    }
+
+    :global(.webp) section {
+      background-image: url("../img/background-desktop.webp");
+    }
+  }
+
+  @screen xl {
+    section {
+      background-image: url("../img/background-widescreen.png");
+    }
+
+    :global(.webp) section {
+      background-image: url("../img/background-widescreen.webp");
+    }
   }
 </style>
 
