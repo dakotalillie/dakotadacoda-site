@@ -2,6 +2,8 @@
   export let image;
   export let name;
   export let className = "";
+
+  $: isCarouselSlide = className === "splide__slide";
 </script>
 
 <style>
@@ -26,6 +28,11 @@
 </style>
 
 <figure class={className}>
-  <img data-splide-lazy={`img/${image}`} data-src={`img/${image}`} alt={name} loading="lazy" class="lazyload" />
+  <img
+    data-splide-lazy={isCarouselSlide ? `img/${image}` : undefined}
+    data-src={isCarouselSlide ? undefined : `img/${image}`}
+    alt={name}
+    loading={isCarouselSlide ? undefined : 'lazy'}
+    class={isCarouselSlide ? undefined : 'lazyload'} />
   <figcaption class="mt-2 text-center text-sm leading-4">{name}</figcaption>
 </figure>

@@ -63,6 +63,7 @@
       arrows: false,
       perPage: 4,
       keyboard: "focused",
+      lazyLoad: "sequential",
       breakpoints: {
         500: {
           perPage: 3,
