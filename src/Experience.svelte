@@ -85,7 +85,7 @@
   }
 
   .splide :global(.splide__pagination) {
-    @apply bottom-0 left-0 relative mt-2 transform-none;
+    @apply bottom-0 left-0 relative mt-3 transform-none;
     width: 93%;
   }
 
