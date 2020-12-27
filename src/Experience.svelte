@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import Splide from "@splidejs/splide";
   import ExperienceTile from "./ExperienceTile.svelte";
 
   const experience = [
@@ -72,23 +71,42 @@
     },
   ];
 
-  onMount(() => {
-    const commonOptions = {
-      arrows: false,
-      perPage: 4,
-      keyboard: "focused",
-      lazyLoad: "sequential",
-      breakpoints: {
-        500: {
-          perPage: 3,
-        },
-      },
-    };
+  let isMobile = false;
 
-    new Splide("#languages-carousel", commonOptions).mount();
-    new Splide("#frameworks-carousel", commonOptions).mount();
-    new Splide("#other-tools-carousel", commonOptions).mount();
-    new Splide("#certifications-carousel", { ...commonOptions, pagination: false, drag: false }).mount();
+  $: if (isMobile) {
+    import("@splidejs/splide").then(({ default: Splide }) => {
+      const commonOptions = {
+        arrows: false,
+        perPage: 4,
+        keyboard: "focused",
+        lazyLoad: "sequential",
+        breakpoints: {
+          500: {
+            perPage: 3,
+          },
+        },
+      };
+
+      new Splide("#languages-carousel", commonOptions).mount();
+      new Splide("#frameworks-carousel", commonOptions).mount();
+      new Splide("#other-tools-carousel", commonOptions).mount();
+      new Splide("#certifications-carousel", { ...commonOptions, pagination: false, drag: false }).mount();
+    });
+  }
+
+  onMount(() => {
+    function checkIfMobile() {
+      if (!isMobile && window.matchMedia("(max-width: 639px)").matches) {
+        isMobile = true;
+        removeEventListener("resize", checkIfMobile);
+      }
+    }
+
+    checkIfMobile();
+    if (!isMobile) {
+      addEventListener("resize", checkIfMobile);
+      return () => removeEventListener("resize", checkIfMobile);
+    }
   });
 </script>
 
