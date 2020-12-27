@@ -18,15 +18,18 @@
         and
         <a href="https://tailwindcss.com/">Tailwind CSS</a>.
       </p>
-      <p>Its source code is available <a href="https://github.com/dakotalillie/dakotadacoda-site">here</a>.</p>
-      <p>It is deployed using <a href="https://pages.github.com/">Github Pages</a>.</p>
+      <p>Its source code is available on <a href="https://github.com/dakotalillie/dakotadacoda-site">Github</a>.</p>
+      <p>It is hosted on <a href="https://pages.github.com/">Github Pages</a>.</p>
       <p>
         Form submissions are handled by a
         <a href="https://aws.amazon.com/lambda/">Lambda</a>
         written in
         <a href="https://golang.org/">Go</a>.
       </p>
-      <p>The source code for that is available <a href="https://github.com/dakotalillie/dakotadacoda-svc">here</a>.</p>
+      <p>
+        The source code for that is also available on
+        <a href="https://github.com/dakotalillie/dakotadacoda-svc">Github</a>.
+      </p>
     </div>
     <div class="flex flex-row items-center space-x-6">
       <Github />
