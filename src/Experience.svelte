@@ -13,7 +13,7 @@
         { image: "php.png", name: "PHP" },
         { image: "golang.jpg", name: "Golang" },
         { image: "ruby.png", name: "Ruby" },
-        { image: "c++.png", name: "C++" },
+        { image: "c-plus-plus.png", name: "C++" },
       ],
     },
     {

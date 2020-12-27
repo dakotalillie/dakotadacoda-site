@@ -24,7 +24,7 @@
         Form submissions are handled by a
         <a href="https://aws.amazon.com/lambda/">Lambda</a>
         written in
-        <a href="https://golang.org/">Go</a>.
+        <a href="https://golang.org/">Golang</a>.
       </p>
       <p>
         The source code for that is also available on

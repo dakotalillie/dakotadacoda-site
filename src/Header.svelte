@@ -29,11 +29,11 @@
 <header class="fixed w-full z-10">
   <div class="bg-gray-900 py-4 h-16 shadow-2xl">
     <div class="container mx-auto flex flex-row justify-between px-8">
-      <a href="#home"><Logo /></a>
+      <a aria-label="logo" href="#home"><Logo /></a>
       <nav class="hidden flex-row space-x-4 items-center sm:flex">
         {#each links as { href, label }}<a {href}>{label}</a>{/each}
       </nav>
-      <button class="sm:hidden" on:click={toggleMobileNav}><Hamburger /></button>
+      <button aria-label="open menu" class="sm:hidden" on:click={toggleMobileNav}><Hamburger /></button>
     </div>
   </div>
   {#if showMobileNav}

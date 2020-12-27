@@ -73,7 +73,7 @@
           <p class="flex items-center text-red-400">Oops! Something went wrong.</p>
         {/if}
         <button
-          class="py-2 px-4 bg-blue-500 hover:bg-blue-400 rounded"
+          class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded"
           disabled={requestStatus === 'requested'}
           type="submit">
           {#if requestStatus === 'requested'}

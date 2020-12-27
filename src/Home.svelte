@@ -37,7 +37,7 @@
 
 <section id="home" class="flex flex-col justify-center items-center">
   <h1 class="text-5xl sm:text-7xl">Dakota Lillie</h1>
-  <h3 class="text-xl sm:2xl mt-3">Software Engineer</h3>
+  <h2 class="text-xl sm:2xl mt-3">Software Engineer</h2>
   <div class="flex space-x-6 mt-6">
     <Github />
     <LinkedIn />
