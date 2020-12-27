@@ -26,7 +26,7 @@
     <picture class="mt-8 sm:mt-0">
       <source data-srcset="img/profile.webp" type="image/webp" />
       <source data-srcset="img/profile.jpg" type="image/jpeg" />
-      <img data-src="img/profile.jpg" alt="Dakota profile" class="lazyload h-56 rounded-3xl" />
+      <img data-src="img/profile.jpg" alt="Dakota profile" width="224px" height="224px" class="lazyload rounded-3xl" />
     </picture>
   </div>
 </section>
