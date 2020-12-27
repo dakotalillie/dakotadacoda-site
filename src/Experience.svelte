@@ -52,9 +52,21 @@
     {
       category: "Certifications",
       items: [
-        { image: "aws-developer-associate.png", name: "AWS Certified Developer Associate" },
-        { image: "aws-cloud-practitioner.png", name: "AWS Certified Cloud Practitioner" },
-        { image: "ckad.png", name: "Certified Kubernetes Application Developer" },
+        {
+          image: "aws-developer-associate.png",
+          name: "AWS Certified Developer Associate",
+          link: "https://www.youracclaim.com/badges/89317c55-c23f-4822-bce9-78b3479d5ffd/public_url",
+        },
+        {
+          image: "aws-cloud-practitioner.png",
+          name: "AWS Certified Cloud Practitioner",
+          link: "https://www.youracclaim.com/badges/f449ea60-c666-4301-91ef-a20dc67da115/public_url",
+        },
+        {
+          image: "ckad.png",
+          name: "Certified Kubernetes Application Developer",
+          link: "https://www.youracclaim.com/badges/5aad5dbf-9f98-4911-972b-2835d065ebb4/public_url",
+        },
       ],
     },
   ];

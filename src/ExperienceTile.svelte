@@ -1,8 +1,7 @@
 <script>
-  import clsx from "clsx";
-
   export let image;
   export let name;
+  export let link = undefined;
   export let className = "";
 
   $: isCarouselSlide = className === "splide__slide";
@@ -29,12 +28,14 @@
   }
 </style>
 
-<figure class={clsx(className, 'space-y-2')}>
-  <img
-    data-splide-lazy={isCarouselSlide ? `img/${image}` : undefined}
-    data-src={isCarouselSlide ? undefined : `img/${image}`}
-    alt={name}
-    loading={isCarouselSlide ? undefined : 'lazy'}
-    class={isCarouselSlide ? undefined : 'lazyload'} />
-  <figcaption class="text-center text-sm leading-4">{name}</figcaption>
-</figure>
+<a class={className} href={link} target="_blank">
+  <figure class="space-y-2">
+    <img
+      data-splide-lazy={isCarouselSlide ? `img/${image}` : undefined}
+      data-src={isCarouselSlide ? undefined : `img/${image}`}
+      alt={name}
+      loading={isCarouselSlide ? undefined : 'lazy'}
+      class={isCarouselSlide ? undefined : 'lazyload'} />
+    <figcaption class="text-center text-sm leading-4">{name}</figcaption>
+  </figure>
+</a>
