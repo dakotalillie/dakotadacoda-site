@@ -23,6 +23,7 @@
         { image: "gatsby.png", name: "Gatsby" },
         { image: "nextjs.jpg", name: "NextJS" },
         { image: "svelte.png", name: "Svelte" },
+        { image: "sapper.png", name: "Sapper" },
         { image: "express.png", name: "Express" },
         { image: "flask.png", name: "Flask" },
         { image: "django.png", name: "Django" },
