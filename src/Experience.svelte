@@ -52,6 +52,7 @@
     {
       category: "Certifications",
       items: [
+        { image: "aws-developer-associate.png", name: "AWS Certified Developer Associate" },
         { image: "aws-cloud-practitioner.png", name: "AWS Certified Cloud Practitioner" },
         { image: "ckad.png", name: "Certified Kubernetes Application Developer" },
       ],
