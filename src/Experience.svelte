@@ -131,9 +131,8 @@
 <div id="experience" />
 <section class="bg-gray-700">
   <div class="container mx-auto py-12 px-8 space-y-8 md:py-16">
-    <h2 class="text-3xl text-center md:text-left">Experience</h2>
     {#each experience as { category, items }}
-      <h3 class="text-2xl">{category}</h3>
+      <h2 class="text-2xl">{category}</h2>
       <div
         class="text-gray-300 hidden sm:grid sm:space-x-0 sm:gap-y-8 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12">
         {#each items as item}
