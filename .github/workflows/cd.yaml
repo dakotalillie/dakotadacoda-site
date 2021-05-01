@@ -25,7 +25,7 @@ jobs:
           rm -rf public
       - name: Create CNAME file
         run: |
-          echo "dakotadacoda.com" > CNAME
+          echo "www.dakotadacoda.com" > CNAME
       - name: Configure git
         run: |
           git config --local user.email "dakota.lillie@icloud.com"
