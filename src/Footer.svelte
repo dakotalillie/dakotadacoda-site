@@ -3,12 +3,6 @@
   import LinkedIn from "./LinkedIn.svelte";
 </script>
 
-<style>
-  a {
-    text-decoration: underline;
-  }
-</style>
-
 <footer class="bg-gray-900">
   <div class="container mx-auto py-8 px-8 flex flex-col xsm:items-center xsm:space-y-6 sm:justify-between sm:flex-row">
     <div class="flex flex-col space-y-1 justify-center items-center text-center text-xs md:text-left md:items-start">
@@ -37,3 +31,9 @@
     </div>
   </div>
 </footer>
+
+<style>
+  a {
+    text-decoration: underline;
+  }
+</style>

@@ -25,22 +25,6 @@
   }
 </script>
 
-<style>
-  #contact {
-    padding-top: 4rem;
-    margin-top: -4rem;
-  }
-
-  textarea {
-    min-height: 12rem;
-    resize: none;
-  }
-
-  button {
-    width: 84px;
-  }
-</style>
-
 <div id="contact" />
 <section class="bg-gray-800">
   <div class="container mx-auto py-12 px-8 space-y-8 md:py-16">
@@ -67,16 +51,17 @@
         </div>
       </div>
       <div class="flex flex-row justify-end space-x-4">
-        {#if requestStatus === 'succeeded'}
+        {#if requestStatus === "succeeded"}
           <p class="flex items-center text-green-400">Your message has been sent!</p>
-        {:else if requestStatus === 'failed'}
+        {:else if requestStatus === "failed"}
           <p class="flex items-center text-red-400">Oops! Something went wrong.</p>
         {/if}
         <button
           class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded"
-          disabled={requestStatus === 'requested'}
-          type="submit">
-          {#if requestStatus === 'requested'}
+          disabled={requestStatus === "requested"}
+          type="submit"
+        >
+          {#if requestStatus === "requested"}
             <Spinner />
           {:else}Submit{/if}
         </button>
@@ -84,3 +69,19 @@
     </form>
   </div>
 </section>
+
+<style>
+  #contact {
+    padding-top: 4rem;
+    margin-top: -4rem;
+  }
+
+  textarea {
+    min-height: 12rem;
+    resize: none;
+  }
+
+  button {
+    width: 84px;
+  }
+</style>

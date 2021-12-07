@@ -7,14 +7,14 @@
   import Footer from "./Footer.svelte";
 </script>
 
+<Global />
+<Header />
+<Main />
+<Footer />
+
 <style>
   :global(html) {
     @apply bg-gray-900;
     scroll-behavior: smooth;
   }
 </style>
-
-<Global />
-<Header />
-<Main />
-<Footer />

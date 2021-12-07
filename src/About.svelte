@@ -2,13 +2,6 @@
   import BloombergLogo from "./BloombergLogo.svelte";
 </script>
 
-<style>
-  #about {
-    padding-top: 4rem;
-    margin-top: -4rem;
-  }
-</style>
-
 <div id="about" />
 <section class="bg-gray-800">
   <div class="container mx-auto py-12 px-8 flex flex-col items-center sm:flex-row sm:justify-between md:py-16">
@@ -30,3 +23,10 @@
     </picture>
   </div>
 </section>
+
+<style>
+  #about {
+    padding-top: 4rem;
+    margin-top: -4rem;
+  }
+</style>

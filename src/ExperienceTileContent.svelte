@@ -8,6 +8,19 @@
   $: isCarouselSlide = className === "splide__slide";
 </script>
 
+<figure class={clsx(className, "space-y-2")}>
+  <img
+    data-splide-lazy={isCarouselSlide ? `img/${image}` : undefined}
+    data-src={isCarouselSlide ? undefined : `img/${image}`}
+    alt={name}
+    loading={isCarouselSlide ? undefined : "lazy"}
+    class={isCarouselSlide ? undefined : "lazyload"}
+    height="64px"
+    width="64px"
+  />
+  <figcaption class="text-center text-sm leading-4">{name}</figcaption>
+</figure>
+
 <style>
   img {
     @apply w-24 h-24;
@@ -37,15 +50,3 @@
     }
   }
 </style>
-
-<figure class={clsx(className, 'space-y-2')}>
-  <img
-    data-splide-lazy={isCarouselSlide ? `img/${image}` : undefined}
-    data-src={isCarouselSlide ? undefined : `img/${image}`}
-    alt={name}
-    loading={isCarouselSlide ? undefined : 'lazy'}
-    class={isCarouselSlide ? undefined : 'lazyload'}
-    height="64px"
-    width="64px" />
-  <figcaption class="text-center text-sm leading-4">{name}</figcaption>
-</figure>

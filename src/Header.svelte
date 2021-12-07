@@ -39,7 +39,8 @@
   {#if showMobileNav}
     <nav
       class="bg-gray-900 max-w-max rounded-bl-lg px-4 float-right shadow-2xl sm:hidden flex flex-col divide-y"
-      bind:this={mobileNav}>
+      bind:this={mobileNav}
+    >
       {#each links as { href, label }}<a class="p-2" {href} on:click={toggleMobileNav}>{label}</a>{/each}
     </nav>
   {/if}
