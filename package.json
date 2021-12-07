@@ -10,26 +10,26 @@
   "author": "Dakota Lillie",
   "license": "ISC",
   "dependencies": {
-    "@splidejs/splide": "^2.4.21",
+    "@splidejs/splide": "^3.6.9",
     "clsx": "^1.1.1",
-    "lazysizes": "^5.3.0-beta1",
-    "sirv-cli": "^1.0.0"
+    "lazysizes": "^5.3.2",
+    "sirv-cli": "^1.0.14"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^16.0.0",
-    "@rollup/plugin-node-resolve": "^10.0.0",
-    "autoprefixer": "^10.0.2",
-    "postcss": "^8.1.10",
-    "postcss-cli": "^8.3.0",
-    "postcss-nesting": "^7.0.1",
-    "prettier": "^2.2.1",
-    "rollup": "^2.3.4",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2",
+    "postcss-nesting": "^10.0.2",
+    "prettier": "^2.5.1",
+    "rollup": "^2.60.2",
     "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0",
-    "svelte-preprocess": "^4.6.1",
-    "tailwindcss": "^2.0.1"
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "svelte": "^3.44.2",
+    "svelte-preprocess": "^4.9.8",
+    "tailwindcss": "^2.2.19"
   }
 }
