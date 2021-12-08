@@ -4,54 +4,13 @@
 
   const experience = [
     {
-      category: "Languages",
-      items: [
-        { image: "javascript.png", name: "JavaScript" },
-        { image: "typescript.png", name: "TypeScript" },
-        { image: "python.png", name: "Python" },
-        { image: "php.png", name: "PHP" },
-        { image: "golang.jpg", name: "Golang" },
-        { image: "ruby.png", name: "Ruby" },
-        { image: "c-plus-plus.png", name: "C++" },
-      ],
-    },
-    {
-      category: "Frameworks",
-      items: [
-        { image: "react.png", name: "React" },
-        { image: "gatsby.png", name: "Gatsby" },
-        { image: "nextjs.jpg", name: "NextJS" },
-        { image: "svelte.png", name: "Svelte" },
-        { image: "sapper.png", name: "Sapper" },
-        { image: "express.png", name: "Express" },
-        { image: "flask.png", name: "Flask" },
-        { image: "django.png", name: "Django" },
-        { image: "wordpress.png", name: "WordPress" },
-        { image: "rails.png", name: "Ruby on Rails" },
-      ],
-    },
-    {
-      category: "Other Tools",
-      items: [
-        { image: "jest.png", name: "Jest" },
-        { image: "testing-library.png", name: "Testing Library" },
-        { image: "pytest.png", name: "PyTest" },
-        { image: "sass.png", name: "Sass" },
-        { image: "tailwind.jpg", name: "Tailwind" },
-        { image: "styled-components.png", name: "Styled Components" },
-        { image: "emotion.png", name: "Emotion" },
-        { image: "redux.png", name: "Redux" },
-        { image: "graphql.png", name: "GraphQL" },
-        { image: "swagger.png", name: "Swagger" },
-        { image: "docker.png", name: "Docker" },
-        { image: "kubernetes.png", name: "Kubernetes" },
-        { image: "terraform.png", name: "Terraform" },
-        { image: "jenkins.png", name: "Jenkins" },
-      ],
-    },
-    {
       category: "Certifications",
       items: [
+        {
+          image: "aws-solutions-architect-associate.png",
+          name: "AWS Solutions Architect Associate",
+          link: "https://www.credly.com/badges/1f89449b-0018-4207-b1ff-7cd9ae94d196/public_url",
+        },
         {
           image: "aws-developer-associate.png",
           name: "AWS Certified Developer Associate",
@@ -69,6 +28,52 @@
         },
       ],
     },
+    {
+      category: "Languages",
+      items: [
+        { image: "javascript.png", name: "JavaScript" },
+        { image: "typescript.png", name: "TypeScript" },
+        { image: "golang.jpg", name: "Golang" },
+        { image: "python.png", name: "Python" },
+        { image: "php.png", name: "PHP" },
+        { image: "ruby.png", name: "Ruby" },
+        { image: "c-plus-plus.png", name: "C++" },
+      ],
+    },
+    {
+      category: "Frameworks",
+      items: [
+        { image: "react.png", name: "React" },
+        { image: "nextjs.jpg", name: "NextJS" },
+        { image: "gatsby.png", name: "Gatsby" },
+        { image: "svelte.png", name: "Svelte" },
+        { image: "express.png", name: "Express" },
+        { image: "flask.png", name: "Flask" },
+        { image: "django.png", name: "Django" },
+        { image: "wordpress.png", name: "WordPress" },
+        { image: "rails.png", name: "Ruby on Rails" },
+      ],
+    },
+    {
+      category: "Other Tools",
+      items: [
+        { image: "docker.png", name: "Docker" },
+        { image: "kubernetes.png", name: "Kubernetes" },
+        { image: "terraform.png", name: "Terraform" },
+        { image: "jenkins.png", name: "Jenkins" },
+        { image: "argo.png", name: "Argo" },
+        { image: "graphql.png", name: "GraphQL" },
+        { image: "jest.png", name: "Jest" },
+        { image: "testing-library.png", name: "Testing Library" },
+        { image: "pytest.png", name: "PyTest" },
+        { image: "sass.png", name: "Sass" },
+        { image: "tailwind.jpg", name: "Tailwind" },
+        { image: "styled-components.png", name: "Styled Components" },
+        { image: "emotion.png", name: "Emotion" },
+        { image: "redux.png", name: "Redux" },
+        { image: "swagger.png", name: "Swagger" },
+      ],
+    },
   ];
 
   let isMobile = false;
@@ -77,20 +82,18 @@
     import("@splidejs/splide").then(({ default: Splide }) => {
       const commonOptions = {
         arrows: false,
-        perPage: 4,
+        breakpoints: { 500: { perPage: 3 } },
+        flickMaxPages: 1,
+        flickPower: 200,
         keyboard: "focused",
         lazyLoad: "sequential",
-        breakpoints: {
-          500: {
-            perPage: 3,
-          },
-        },
+        perPage: 4,
       };
 
       new Splide("#languages-carousel", commonOptions).mount();
       new Splide("#frameworks-carousel", commonOptions).mount();
       new Splide("#other-tools-carousel", commonOptions).mount();
-      new Splide("#certifications-carousel", { ...commonOptions, pagination: false, drag: false }).mount();
+      new Splide("#certifications-carousel", commonOptions).mount();
     });
   }
 

@@ -1,4 +1,5 @@
 <script>
+  import clsx from "clsx";
   import ExperienceTileContent from "./ExperienceTileContent.svelte";
 
   export let image;
@@ -8,7 +9,7 @@
 </script>
 
 {#if link !== undefined}
-  <a class={className} href={link} target="_blank" rel="noopener noreferrer">
+  <a class={clsx(className, "underline")} href={link} target="_blank" rel="noopener noreferrer">
     <ExperienceTileContent {image} {name} />
   </a>
 {:else}
