@@ -62,6 +62,7 @@
         { image: "terraform.png", name: "Terraform" },
         { image: "jenkins.png", name: "Jenkins" },
         { image: "argo.png", name: "Argo" },
+        { image: "opa.png", name: "OPA" },
         { image: "graphql.png", name: "GraphQL" },
         { image: "jest.png", name: "Jest" },
         { image: "testing-library.png", name: "Testing Library" },
