@@ -7,6 +7,16 @@
       category: "Certifications",
       items: [
         {
+          image: "cka.png",
+          name: "Certified Kubernetes Administrator",
+          link: "https://www.credly.com/badges/6309645c-d710-459f-9239-4ec75360ca14/public_url",
+        },
+        {
+          image: "ckad.png",
+          name: "Certified Kubernetes Application Developer",
+          link: "https://www.youracclaim.com/badges/5aad5dbf-9f98-4911-972b-2835d065ebb4/public_url",
+        },
+        {
           image: "aws-solutions-architect-associate.png",
           name: "AWS Solutions Architect Associate",
           link: "https://www.credly.com/badges/1f89449b-0018-4207-b1ff-7cd9ae94d196/public_url",
@@ -20,11 +30,6 @@
           image: "aws-cloud-practitioner.png",
           name: "AWS Certified Cloud Practitioner",
           link: "https://www.youracclaim.com/badges/f449ea60-c666-4301-91ef-a20dc67da115/public_url",
-        },
-        {
-          image: "ckad.png",
-          name: "Certified Kubernetes Application Developer",
-          link: "https://www.youracclaim.com/badges/5aad5dbf-9f98-4911-972b-2835d065ebb4/public_url",
         },
       ],
     },
