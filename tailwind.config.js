@@ -1,11 +1,5 @@
-const production = !process.env.ROLLUP_WATCH;
-
 module.exports = {
-  darkMode: false,
-  purge: {
-    content: ["./public/index.html", "./src/**/*.svelte"],
-    enabled: production,
-  },
+  content: ["./public/index.html", "./src/**/*.svelte"],
   theme: {
     fontFamily: {
       sans: ["Source Sans Pro", "sans-serif"],
