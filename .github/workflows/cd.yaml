@@ -15,14 +15,14 @@ jobs:
         run: npm ci
       - name: Build assets
         run: npm run build
-      - name: Delete everything but the 'public' directory
+      - name: Delete everything but the 'dist' directory
         run: |
           find . -type f -maxdepth 1 -exec rm -f {} +
-          find . ! \( -name '.' -o -name '..' -o -name '.git' -o -name 'public' \) -type d -maxdepth 1 -exec rm -rf {} +
-      - name: Move the 'public' directory contents up to the root
+          find . ! \( -name '.' -o -name '..' -o -name '.git' -o -name 'dist' \) -type d -maxdepth 1 -exec rm -rf {} +
+      - name: Move the 'dist' directory contents up to the root
         run: |
-          mv public/* .
-          rm -rf public
+          mv dist/* .
+          rm -rf dist
       - name: Create CNAME file
         run: |
           echo "www.dakotadacoda.com" > CNAME

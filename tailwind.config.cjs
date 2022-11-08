@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./public/index.html", "./src/**/*.svelte"],
+  content: ["./index.html", "./src/**/*.svelte"],
   theme: {
     fontFamily: {
       sans: ["Source Sans Pro", "sans-serif"],

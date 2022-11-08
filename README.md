@@ -4,8 +4,8 @@ This repository contains the source code for my personal website, dakotadacoda.c
 
 ## Local Setup
 
-Pull down this repo, run `npm install`, then `npm run dev`. This will start a local development server on port 5000. You
-can also run `npm run build` followed by `npm start` in order to view the production-optimized build, also on port 5000.
+Pull down this repo, run `npm install`, then `npm run dev`. This will start a local development server on port 5137. You
+can also run `npm run build` followed by `npm run preview` in order to view the production-optimized build on port 4137.
 
 ## Deploying Updates
 

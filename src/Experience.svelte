@@ -156,6 +156,7 @@
   }
 
   .splide :global(.splide__pagination__page) {
+    background-color: white;
     height: 10px;
     margin: 6px;
     width: 10px;

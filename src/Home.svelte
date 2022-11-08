@@ -14,32 +14,32 @@
 
 <style>
   section {
-    background: transparent url("../img/background-mobile.png") no-repeat 50% center;
+    background: transparent url("/img/background-mobile.png") no-repeat 50% center;
     background-size: cover;
     height: 36rem;
   }
 
   :global(.webp) section {
-    background-image: url("../img/background-mobile.webp");
+    background-image: url("/img/background-mobile.webp");
   }
 
   @screen lg {
     section {
-      background-image: url("../img/background-desktop.png");
+      background-image: url("/img/background-desktop.png");
     }
 
     :global(.webp) section {
-      background-image: url("../img/background-desktop.webp");
+      background-image: url("/img/background-desktop.webp");
     }
   }
 
   @screen xl {
     section {
-      background-image: url("../img/background-widescreen.png");
+      background-image: url("/img/background-widescreen.png");
     }
 
     :global(.webp) section {
-      background-image: url("../img/background-widescreen.webp");
+      background-image: url("/img/background-widescreen.webp");
     }
   }
 </style>
