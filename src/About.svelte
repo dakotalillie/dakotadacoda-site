@@ -13,9 +13,9 @@
       </p>
       <p>Some things I'm into:</p>
       <ul class="text-left list-disc ml-8 space-y-2 text-xl">
-        <li>Improving developer experiences through effective tooling</li>
-        <li>Designing highly available, low-cost solutions using the public cloud</li>
-        <li>Figuring out how to distill complex ideas into code which can be easily understood</li>
+        <li>Writing effective tests for keeping applications bug-free while maintaining development velocity</li>
+        <li>Adopting software patterns and standards that keep code easy to change and understand</li>
+        <li>Architecting applications using cloud-native solutions for high availability at minimal cost</li>
       </ul>
     </div>
     <picture class="mt-8 sm:mt-0 flex-shrink-0">

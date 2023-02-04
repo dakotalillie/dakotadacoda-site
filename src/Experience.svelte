@@ -36,7 +36,6 @@
     {
       category: "Languages",
       items: [
-        { image: "javascript.png", name: "JavaScript" },
         { image: "typescript.png", name: "TypeScript" },
         { image: "golang.jpg", name: "Golang" },
         { image: "python.png", name: "Python" },
